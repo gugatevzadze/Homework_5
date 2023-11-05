@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
 
+    //firebase documentation code, refactored in a bit for my specific needs
     private fun signIn(email: String, password: String) {
         val auth = FirebaseAuth.getInstance()
         auth.signInWithEmailAndPassword(email, password)

@@ -8,19 +8,21 @@ import com.example.homework_5.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    //placed intent in separate function to reduce redundant code
+    private fun buttonClick(destinationClass: Class<*>){
+        val intent = Intent(this, destinationClass)
+        startActivity(intent)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.loginBtn.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            buttonClick(LoginActivity::class.java)
         }
         binding.registerBtn.setOnClickListener {
-            val intent = Intent(this, RegisterActivity1::class.java)
-            startActivity(intent)
+            buttonClick(RegisterActivity1::class.java)
         }
     }
 }

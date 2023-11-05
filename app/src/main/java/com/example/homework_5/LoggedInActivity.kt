@@ -15,10 +15,6 @@ class LoggedInActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val user = Firebase.auth.currentUser
-        user?.let {
-            val userName = it.displayName
-            val email = it.email
-        }
 
         binding.displayUserName.text = user?.displayName
         binding.displayMail.text = user?.email

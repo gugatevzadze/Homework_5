@@ -12,6 +12,7 @@ import com.google.firebase.ktx.Firebase
 class RegisterActivity2 : AppCompatActivity() {
     private lateinit var binding: ActivityRegister2Binding
 
+    //refactored firebase code, imported a lot of firebase classes
     private fun addingUsername(inputtedUsername: String) {
         val user = Firebase.auth.currentUser
         val updatedUsername =

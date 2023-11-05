@@ -13,6 +13,7 @@ class RegisterActivity1 : AppCompatActivity() {
     private lateinit var binding: ActivityRegister1Binding
     private lateinit var auth: FirebaseAuth
 
+    //firebase code, did the same here as in LoginActivity
     private fun registerAcc(email:String,password:String){
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
